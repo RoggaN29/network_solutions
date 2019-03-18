@@ -5,6 +5,14 @@ body {
   font-family: "Open Sans", sans-serif;
   color: #111111; }
 
+.bienvenidos {
+  background: url("../images/fondo-encabezado.jpg") no-repeat center top;
+  background-size: cover;
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  flex-direction: column; }
+
 .encabezado {
   padding: 0.5rem 0;
   background: #111111;
@@ -55,6 +63,8 @@ body {
     padding: 0;
     list-style: none;
     margin: 1rem 0 0 0; }
+    #menu-principal ul li.active a {
+      color: #12afaf; }
     #menu-principal ul a {
       display: block;
       padding: .8rem 0;
@@ -63,5 +73,38 @@ body {
       text-transform: uppercase;
       border-top: 1px solid #6b6060;
       text-decoration: none; }
+      #menu-principal ul a:hover {
+        color: #12afaf; }
+
+.btn-primary {
+  color: #fff;
+  border-color: transparent;
+  background-color: #12afaf;
+  margin-top: 1rem;
+  transition: all .5s ease; }
+  .btn-primary:hover, .btn-primary:focus, .btn-primary:not(:disabled):not(.disabled):active {
+    border-color: transparent;
+    background-color: #009500; }
+
+.texto-encabezado {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center; }
+  .texto-encabezado .display-4 {
+    margin-top: 4rem; }
+
+.flecha-bajar a {
+  display: inline-block;
+  color: #fff;
+  font-size: 4rem;
+  animation: flecha-animada 1.5s ease-in-out infinite; }
+
+@keyframes flecha-animada {
+  from {
+    transform: translateY(0); }
+  50% {
+    transform: translateY(6px); }
+  to {
+    transform: translateY(0); } }
 
 /*# sourceMappingURL=estilos.css.map */

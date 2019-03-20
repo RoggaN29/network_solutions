@@ -14,6 +14,10 @@ body {
     color: $texto;
 }
 
+li {
+    list-style: none;
+}
+
 .bienvenidos {
     background: url('../images/fondo-encabezado.jpg') no-repeat center top;
     background-size: cover;
@@ -72,14 +76,16 @@ body {
         border: 0;
         border-radius: 5px 0 0 5px;
         padding: 1rem;
+        flex: 1 1 auto;
     }
 
     input[type="submit"] {
-        flex: 1 1 auto;
+        flex: 0 1 auto;
         border: 0;
         border-radius: 0 5px 5px 0;
         background: $principal;
         color: #fff;
+        padding: 0 1rem;
     }
 }
 
@@ -154,5 +160,166 @@ body {
 
     to {
         transform: translateY(0);
+    }
+}
+
+.agencia {
+    background-color: $principal;
+    color: #fff;
+
+    img {
+        max-width: 80%;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+section.tu-mejor-eleccion {
+    h2 span {
+        color: $principal;
+    }
+
+    li {
+        min-height: 9rem;
+    }
+
+    li .fa,
+    li .far {
+        font-size: 2.3rem;
+        background: $secundario;
+        color: #fff;
+        border-radius: 50%;
+        width: 4.5rem;
+        height: 4.5rem;
+        line-height: 4.5rem;
+    }
+
+    .contenedor-eleccion {
+
+        h4 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-top: .8rem;
+        }
+    }
+}
+
+.servicios {
+    background: url('../images/fondo-servicios.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+
+    article {
+        display: flex;
+        align-items: center;
+        margin: 1rem 0;
+
+        img {
+            flex: 0 0 60px;
+            overflow: hidden;
+            margin-right: 1rem;
+        }
+
+        h3 {
+            flex: 1 1 auto;
+            font-size: 1.1rem;
+
+            a {
+                color: #fff;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                text-decoration: none;
+
+                &:hover {
+                    color: $principal;
+                }
+
+                &:after {
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 900;
+                    content: "\f105";
+                    font-size: 2rem;
+                    margin-left: 1rem;
+                    opacity: .5;
+                    position: relative;
+                    left: 0;
+                    transition: all .5s ease;
+                }
+                &:hover::after{
+                    left: -10px;
+                    color: $principal;
+                }
+            }
+        }
+    }
+}
+
+section.ultimos-proyectos{
+    .container{
+        padding-right: 0;
+        padding-left: 0;
+    }
+    a{
+        text-decoration: none;
+        h4{
+            font-size: 1rem;
+            font-weight: bold;
+            text-align: center;
+            color: $texto;
+        }
+    }
+    .owl-nav{
+        display: flex;
+        justify-content: center;
+        margin: .3rem 0;
+        .owl-prev i,  .owl-next i{
+            font-size: 3rem;
+            margin: 0 .5rem;
+            color: $principal;
+            transition: all .5s ease;
+            &:hover{
+                color: $secundario;
+            }
+        }
+    }
+}
+
+.piedepagina{
+    background: $texto;
+    color: #fff;
+    text-align: center;
+    font-size: .9rem;
+    .redes-sociales{
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        a{
+            font-size: 2rem;
+            color: #fff;
+            margin: 0 .5rem;
+            opacity: .5;
+            transition: all .5s ease;
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.ir-arriba{
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 3rem;
+    color: rgb(18, 175, 175);
+    text-decoration: none;
+    z-index: 99999;
+    line-height: 0;
+    transition: all .5s ease;
+    &:hover,&:focus{
+        outline: 0;
+        text-decoration: none;
+        color: #fff;
     }
 }
